@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>像素足球 2.5D · PIXEL KICK</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0d0f1a; color: #cfd6ff;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  #wrap { position: relative; }
+  canvas { display: block; image-rendering: pixelated; image-rendering: crisp-edges;
+    box-shadow: 0 0 0 4px #1d2238, 0 12px 40px rgba(0,0,0,.6); background: #000; }
+  #help { margin-top: 14px; font-size: 13px; line-height: 1.7; display: flex; gap: 36px;
+    text-align: left; opacity: .85; }
+  #help b { color: #fff; }
+  .p1 { color: #ff6b6b; } .p2 { color: #6ba3ff; }
+  kbd { background: #23294a; border: 1px solid #3a4270; border-bottom-width: 2px; border-radius: 3px;
+    padding: 0 5px; font-size: 12px; color: #fff; font-family: inherit; }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game"></canvas></div>
+<div id="help">
+  <div><b class="p1">红队 P1</b><br>
+    移动 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><br>
+    射门/铲球 <kbd>F</kbd>（按住蓄力）<br>
+    挑射/跳起头球 <kbd>G</kbd></div>
+  <div><b class="p2">蓝队 P2</b><br>
+    移动 <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd><br>
+    射门/铲球 <kbd>K</kbd> 或 <kbd>.</kbd>（按住蓄力）<br>
+    挑射/跳起头球 <kbd>L</kbd> 或 <kbd>/</kbd></div>
+  <div><b>通用</b><br>
+    开始 <kbd>空格</kbd>/<kbd>回车</kbd>　暂停 <kbd>P</kbd>/<kbd>Esc</kbd><br>
+    标题界面 <kbd>←</kbd><kbd>→</kbd> 选择比赛时长<br>
+    静音 <kbd>M</kbd>　支持两个手柄</div>
+</div>
+<script src="js/config.js"></script>
+<script src="js/font.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/input.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/view.js"></script>
+<script src="js/ball.js"></script>
+<script src="js/player.js"></script>
+<script src="js/game.js"></script>
+<script src="js/render.js"></script>
+</body>
+</html>
